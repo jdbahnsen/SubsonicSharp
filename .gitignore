@@ -113,3 +113,4 @@ UpgradeLog*.XML
 /.vs/SubsonicSharp/v15/Server/sqlite3/storage.ide
 /.vs/SubsonicSharp/v15/Server/sqlite3/db.lock
 *.dtbcache
+/.vs/SubsonicSharp/DesignTimeBuild/.dtbcache.v2
