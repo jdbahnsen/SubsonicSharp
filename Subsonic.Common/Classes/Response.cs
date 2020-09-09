@@ -51,15 +51,15 @@ namespace Subsonic.Common.Classes
         [XmlElement("videos", typeof(Videos))]
         [XmlElement("videoInfo", typeof(VideoInfo))]
         [XmlChoiceIdentifier(nameof(ItemElementName))]
-        public dynamic Item;
+        public dynamic Item { get; set; }
 
         [XmlIgnore]
-        public ItemChoiceType ItemElementName;
+        public ItemChoiceType ItemElementName { get; set; }
 
         [XmlAttribute("status")]
-        public ResponseStatus Status;
+        public ResponseStatus Status { get; set; }
 
         [XmlAttribute("version")]
-        public string Version;
+        public string Version { get; set; }
     }
 }

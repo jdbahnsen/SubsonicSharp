@@ -6,9 +6,9 @@ namespace Subsonic.Common.Classes
     public class ArtistsID3
     {
         [XmlAttribute("ignoredArticles")]
-        public string IgnoredArticles;
+        public string IgnoredArticles { get; set; }
 
         [XmlElement("index")]
-        public List<IndexID3> Indexes;
+        public List<IndexID3> Indexes { get; set; }
     }
 }

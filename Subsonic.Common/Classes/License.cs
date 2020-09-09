@@ -5,17 +5,14 @@ namespace Subsonic.Common.Classes
 {
     public class License
     {
-        [XmlAttribute("email")]
-        public string Email;
-
-        [XmlAttribute("valid")]
-        public bool Valid;
-
         [XmlIgnore]
         private DateTime? _licenseExpires;
 
         [XmlIgnore]
         private DateTime? _trialExpires;
+
+        [XmlAttribute("email")]
+        public string Email { get; set; }
 
         [XmlAttribute("licenseExpires")]
         public DateTime LicenseExpires
@@ -30,6 +27,9 @@ namespace Subsonic.Common.Classes
             get => _trialExpires.GetValueOrDefault();
             set => _trialExpires = value;
         }
+
+        [XmlAttribute("valid")]
+        public bool Valid { get; set; }
 
         public bool ShouldSerializeLicenseExpires()
         {

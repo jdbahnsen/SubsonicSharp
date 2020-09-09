@@ -4,22 +4,22 @@ namespace Subsonic.Common.Classes
 {
     public class AlbumInfo
     {
-        [XmlElement("notes")]
-        public string Notes;
-
-        [XmlElement("musicBrainzId")]
-        public string MusicBrainzId;
+        [XmlElement("largeImageUrl")]
+        public string LargeImageUrl { get; set; }
 
         [XmlElement("lastFmUrl")]
-        public string LastFmUrl;
-
-        [XmlElement("smallImageUrl")]
-        public string SmallImageUrl;
+        public string LastFmUrl { get; set; }
 
         [XmlElement("mediumImageUrl")]
-        public string MediumImageUrl;
+        public string MediumImageUrl { get; set; }
 
-        [XmlElement("largeImageUrl")]
-        public string LargeImageUrl;
+        [XmlElement("musicBrainzId")]
+        public string MusicBrainzId { get; set; }
+
+        [XmlElement("notes")]
+        public string Notes { get; set; }
+
+        [XmlElement("smallImageUrl")]
+        public string SmallImageUrl { get; set; }
     }
 }

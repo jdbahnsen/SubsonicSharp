@@ -1,58 +1,14 @@
 ﻿using Subsonic.Common.Enums;
 using System;
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
 namespace Subsonic.Common.Classes
 {
     [XmlInclude(typeof(PodcastEpisode))]
     [XmlInclude(typeof(NowPlayingEntry))]
-    public class Child
+    public class Child : IEqualityComparer<Child>
     {
-        [XmlAttribute("album")]
-        public string Album;
-
-        [XmlAttribute("albumId")]
-        public string AlbumId;
-
-        [XmlAttribute("artist")]
-        public string Artist;
-
-        [XmlAttribute("artistId")]
-        public string ArtistId;
-
-        [XmlAttribute("contentType")]
-        public string ContentType;
-
-        [XmlAttribute("coverArt")]
-        public string CoverArt;
-
-        [XmlAttribute("genre")]
-        public string Genre;
-
-        [XmlAttribute("id")]
-        public string Id;
-
-        [XmlAttribute("isDir")]
-        public bool IsDir;
-
-        [XmlAttribute("parent")]
-        public string Parent;
-
-        [XmlAttribute("path")]
-        public string Path;
-
-        [XmlAttribute("suffix")]
-        public string Suffix;
-
-        [XmlAttribute("title")]
-        public string Title;
-
-        [XmlAttribute("transcodedContentType")]
-        public string TranscodedContentType;
-
-        [XmlAttribute("transcodedSuffix")]
-        public string TranscodedSuffix;
-
         [XmlIgnore]
         private double? _averageRating;
 
@@ -101,6 +57,18 @@ namespace Subsonic.Common.Classes
         [XmlIgnore]
         private int? _year;
 
+        [XmlAttribute("album")]
+        public string Album { get; set; }
+
+        [XmlAttribute("albumId")]
+        public string AlbumId { get; set; }
+
+        [XmlAttribute("artist")]
+        public string Artist { get; set; }
+
+        [XmlAttribute("artistId")]
+        public string ArtistId { get; set; }
+
         [XmlAttribute("averageRating")]
         public double AverageRating
         {
@@ -121,6 +89,12 @@ namespace Subsonic.Common.Classes
             get => _bookmarkPosition.GetValueOrDefault();
             set => _bookmarkPosition = value;
         }
+
+        [XmlAttribute("contentType")]
+        public string ContentType { get; set; }
+
+        [XmlAttribute("coverArt")]
+        public string CoverArt { get; set; }
 
         [XmlAttribute("created")]
         public DateTime Created
@@ -143,6 +117,15 @@ namespace Subsonic.Common.Classes
             set => _duration = value;
         }
 
+        [XmlAttribute("genre")]
+        public string Genre { get; set; }
+
+        [XmlAttribute("id")]
+        public string Id { get; set; }
+
+        [XmlAttribute("isDir")]
+        public bool IsDir { get; set; }
+
         [XmlAttribute("isVideo")]
         public bool IsVideo
         {
@@ -163,6 +146,12 @@ namespace Subsonic.Common.Classes
             get => _originalWidth.GetValueOrDefault();
             set => _originalWidth = value;
         }
+
+        [XmlAttribute("parent")]
+        public string Parent { get; set; }
+
+        [XmlAttribute("path")]
+        public string Path { get; set; }
 
         [XmlAttribute("playCount")]
         public long PlayCount
@@ -185,12 +174,24 @@ namespace Subsonic.Common.Classes
             set => _starred = value;
         }
 
+        [XmlAttribute("suffix")]
+        public string Suffix { get; set; }
+
+        [XmlAttribute("title")]
+        public string Title { get; set; }
+
         [XmlAttribute("track")]
         public int Track
         {
             get => _track.GetValueOrDefault();
             set => _track = value;
         }
+
+        [XmlAttribute("transcodedContentType")]
+        public string TranscodedContentType { get; set; }
+
+        [XmlAttribute("transcodedSuffix")]
+        public string TranscodedSuffix { get; set; }
 
         [XmlAttribute("type")]
         public MediaType Type
@@ -234,14 +235,22 @@ namespace Subsonic.Common.Classes
             return obj != null && Equals(obj as Child);
         }
 
+        public bool Equals(Child x, Child y)
+        {
+            return x?.Equals(y) == true;
+        }
+
         public override int GetHashCode()
         {
-            var hash = 13;
+            const int hash = 13;
             const int hashFactor = 7;
 
-            hash = hash * hashFactor + Id.GetHashCode();
+            return (hash * hashFactor) + Id.GetHashCode();
+        }
 
-            return hash;
+        public int GetHashCode(Child obj)
+        {
+            return obj.GetHashCode();
         }
 
         public bool ShouldSerializeAverageRating()

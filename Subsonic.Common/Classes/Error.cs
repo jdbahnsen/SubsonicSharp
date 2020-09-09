@@ -6,9 +6,9 @@ namespace Subsonic.Common.Classes
     public class Error
     {
         [XmlAttribute("code")]
-        public ErrorCode Code;
+        public ErrorCode Code { get; set; }
 
         [XmlAttribute("message")]
-        public string Message;
+        public string Message { get; set; }
     }
 }

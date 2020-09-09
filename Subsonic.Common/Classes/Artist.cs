@@ -5,12 +5,6 @@ namespace Subsonic.Common.Classes
 {
     public class Artist
     {
-        [XmlAttribute("id")]
-        public string Id;
-
-        [XmlAttribute("name")]
-        public string Name;
-
         [XmlIgnore]
         private double? _averageRating;
 
@@ -20,12 +14,21 @@ namespace Subsonic.Common.Classes
         [XmlIgnore]
         private int? _userRating;
 
+        [XmlAttribute("artistImageUrl")]
+        public string ArtistImageUrl { get; set; }
+
         [XmlAttribute("averageRating")]
         public double AverageRating
         {
             get => _averageRating.GetValueOrDefault();
             set => _averageRating = value;
         }
+
+        [XmlAttribute("id")]
+        public string Id { get; set; }
+
+        [XmlAttribute("name")]
+        public string Name { get; set; }
 
         [XmlAttribute("starred")]
         public DateTime Starred

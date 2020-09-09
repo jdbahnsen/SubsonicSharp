@@ -5,12 +5,12 @@ namespace Subsonic.Common.Classes
     public class ChatMessage
     {
         [XmlAttribute("message")]
-        public string Message;
+        public string Message { get; set; }
 
         [XmlAttribute("time")]
-        public long Time;
+        public long Time { get; set; }
 
         [XmlAttribute("username")]
-        public string Username;
+        public string Username { get; set; }
     }
 }

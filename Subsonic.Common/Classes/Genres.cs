@@ -6,6 +6,6 @@ namespace Subsonic.Common.Classes
     public class Genres
     {
         [XmlElementAttribute("genre")]
-        public List<Genre> Items;
+        public List<Genre> Items { get; set; }
     }
 }

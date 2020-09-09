@@ -5,15 +5,15 @@ namespace Subsonic.Common.Classes
     public class InternetRadioStation
     {
         [XmlAttribute("homePageUrl")]
-        public string HomePageUrl;
+        public string HomePageUrl { get; set; }
 
         [XmlAttribute("id")]
-        public string Id;
+        public string Id { get; set; }
 
         [XmlAttribute("name")]
-        public string Name;
+        public string Name { get; set; }
 
         [XmlAttribute("streamUrl")]
-        public string StreamUrl;
+        public string StreamUrl { get; set; }
     }
 }

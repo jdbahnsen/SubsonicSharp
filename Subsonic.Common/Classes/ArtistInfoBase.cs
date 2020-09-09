@@ -7,21 +7,21 @@ namespace Subsonic.Common.Classes
     public class ArtistInfoBase
     {
         [XmlElement("biography")]
-        public string Biography;
-
-        [XmlElement("musicBrainzId")]
-        public string MusicBrainzId;
-
-        [XmlElement("lastFmUrl")]
-        public string LastFmUrl;
-
-        [XmlElement("smallImageUrl")]
-        public string SmallImageUrl;
-
-        [XmlElement("mediumImageUrl")]
-        public string MediumImageUrl;
+        public string Biography { get; set; }
 
         [XmlElement("largeImageUrl")]
-        public string LargeImageUrl;
+        public string LargeImageUrl { get; set; }
+
+        [XmlElement("lastFmUrl")]
+        public string LastFmUrl { get; set; }
+
+        [XmlElement("mediumImageUrl")]
+        public string MediumImageUrl { get; set; }
+
+        [XmlElement("musicBrainzId")]
+        public string MusicBrainzId { get; set; }
+
+        [XmlElement("smallImageUrl")]
+        public string SmallImageUrl { get; set; }
     }
 }

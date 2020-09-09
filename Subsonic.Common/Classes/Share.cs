@@ -6,32 +6,20 @@ namespace Subsonic.Common.Classes
 {
     public class Share
     {
-        [XmlAttribute("created")]
-        public DateTime Created;
-
-        [XmlAttribute("description")]
-        public string Description;
-
-        [XmlElement("entry")]
-        public List<Child> Entries;
-
-        [XmlAttribute("id")]
-        public string Id;
-
-        [XmlAttribute("url")]
-        public string Url;
-
-        [XmlAttribute("username")]
-        public string Username;
-
-        [XmlAttribute("visitCount")]
-        public int VisitCount;
-
         [XmlIgnore]
         private DateTime? _expires;
 
         [XmlIgnore]
         private DateTime? _lastVisited;
+
+        [XmlAttribute("created")]
+        public DateTime Created { get; set; }
+
+        [XmlAttribute("description")]
+        public string Description { get; set; }
+
+        [XmlElement("entry")]
+        public List<Child> Entries { get; set; }
 
         [XmlAttribute("expires")]
         public DateTime Expires
@@ -40,12 +28,24 @@ namespace Subsonic.Common.Classes
             set => _expires = value;
         }
 
+        [XmlAttribute("id")]
+        public string Id { get; set; }
+
         [XmlAttribute("lastVisited")]
         public DateTime LastVisited
         {
             get => _lastVisited.GetValueOrDefault();
             set => _lastVisited = value;
         }
+
+        [XmlAttribute("url")]
+        public string Url { get; set; }
+
+        [XmlAttribute("username")]
+        public string Username { get; set; }
+
+        [XmlAttribute("visitCount")]
+        public int VisitCount { get; set; }
 
         public bool ShouldSerializeExpires()
         {

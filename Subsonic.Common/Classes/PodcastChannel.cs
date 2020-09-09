@@ -7,30 +7,30 @@ namespace Subsonic.Common.Classes
     public class PodcastChannel
     {
         [XmlAttribute("coverArt")]
-        public string CoverArt;
+        public string CoverArt { get; set; }
 
         [XmlAttribute("description")]
-        public string Description;
+        public string Description { get; set; }
 
         [XmlElement("episode")]
-        public List<PodcastEpisode> Episodes;
+        public List<PodcastEpisode> Episodes { get; set; }
 
         [XmlAttribute("errorMessage")]
-        public string ErrorMessage;
+        public string ErrorMessage { get; set; }
 
         [XmlAttribute("id")]
-        public string Id;
+        public string Id { get; set; }
 
         [XmlAttribute("originalImageUrl")]
-        public string OriginalImageUrl;
+        public string OriginalImageUrl { get; set; }
 
         [XmlAttribute("status")]
-        public PodcastStatus Status;
+        public PodcastStatus Status { get; set; }
 
         [XmlAttribute("title")]
-        public string Title;
+        public string Title { get; set; }
 
         [XmlAttribute("url")]
-        public string Url;
+        public string Url { get; set; }
     }
 }

@@ -16,6 +16,7 @@ namespace Subsonic.Common
         public static readonly Version Version1_14_0 = Version.Parse("1.14.0");
         public static readonly Version Version1_15_0 = Version.Parse("1.15.0");
         public static readonly Version Version1_16_0 = Version.Parse("1.16.0");
+        public static readonly Version Version1_16_1 = Version.Parse("1.16.1");
         public static readonly Version Version1_2_0 = Version.Parse("1.2.0");
         public static readonly Version Version1_3_0 = Version.Parse("1.3.0");
         public static readonly Version Version1_4_0 = Version.Parse("1.4.0");
@@ -24,6 +25,6 @@ namespace Subsonic.Common
         public static readonly Version Version1_7_0 = Version.Parse("1.7.0");
         public static readonly Version Version1_8_0 = Version.Parse("1.8.0");
         public static readonly Version Version1_9_0 = Version.Parse("1.9.0");
-        public static readonly Version VersionMax = Version1_16_0;
+        public static readonly Version VersionMax = Version1_16_1;
     }
 }

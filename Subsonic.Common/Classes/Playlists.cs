@@ -6,6 +6,6 @@ namespace Subsonic.Common.Classes
     public class Playlists
     {
         [XmlElement("playlist")]
-        public List<Playlist> Items;
+        public List<Playlist> Items { get; set; }
     }
 }

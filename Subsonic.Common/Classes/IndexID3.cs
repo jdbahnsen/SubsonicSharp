@@ -6,9 +6,9 @@ namespace Subsonic.Common.Classes
     public class IndexID3
     {
         [XmlElement("artist")]
-        public List<ArtistID3> Artists;
+        public List<ArtistID3> Artists { get; set; }
 
         [XmlAttribute("name")]
-        public string Name;
+        public string Name { get; set; }
     }
 }

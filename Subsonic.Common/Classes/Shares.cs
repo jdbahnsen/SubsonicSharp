@@ -6,6 +6,6 @@ namespace Subsonic.Common.Classes
     public class Shares
     {
         [XmlElement("share")]
-        public List<Share> Items;
+        public List<Share> Items { get; set; }
     }
 }

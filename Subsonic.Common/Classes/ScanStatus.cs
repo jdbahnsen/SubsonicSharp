@@ -5,10 +5,7 @@ namespace Subsonic.Common.Classes
     public class ScanStatus
     {
         [XmlIgnore]
-        public long? _count;
-
-        [XmlAttribute("scanning")]
-        public bool Scanning;
+        private long? _count;
 
         [XmlAttribute("count")]
         public long Count
@@ -16,6 +13,9 @@ namespace Subsonic.Common.Classes
             get => _count.GetValueOrDefault();
             set => _count = value;
         }
+
+        [XmlAttribute("scanning")]
+        public bool Scanning { get; set; }
 
         public bool ShouldSerializeCount()
         {

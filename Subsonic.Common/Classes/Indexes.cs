@@ -6,18 +6,18 @@ namespace Subsonic.Common.Classes
     public class Indexes
     {
         [XmlElement("child")]
-        public List<Child> Children;
+        public List<Child> Children { get; set; }
 
         [XmlAttribute("ignoredArticles")]
-        public string IgnoredArticles;
+        public string IgnoredArticles { get; set; }
 
         [XmlElement("index")]
-        public List<Index> Items;
+        public List<Index> Items { get; set; }
 
         [XmlAttribute("lastModified")]
-        public long LastModified;
+        public long LastModified { get; set; }
 
         [XmlElement("shortcut")]
-        public List<Artist> Shortcuts;
+        public List<Artist> Shortcuts { get; set; }
     }
 }

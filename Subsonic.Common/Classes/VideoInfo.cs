@@ -5,16 +5,16 @@ namespace Subsonic.Common.Classes
 {
     public class VideoInfo
     {
-        [XmlElement("captions")]
-        public List<Captions> Captions;
-
         [XmlElement("audioTrack")]
-        public List<AudioTrack> AudioTrack;
+        public List<AudioTrack> AudioTrack { get; set; }
 
-        [XmlElement("conversion")]
-        public List<VideoConversion> VideoConversion;
+        [XmlElement("captions")]
+        public List<Captions> Captions { get; set; }
 
         [XmlAttribute("id")]
-        public string Id;
+        public string Id { get; set; }
+
+        [XmlElement("conversion")]
+        public List<VideoConversion> VideoConversion { get; set; }
     }
 }

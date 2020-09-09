@@ -6,6 +6,6 @@ namespace Subsonic.Common.Classes
     public class JukeboxPlaylist : JukeboxStatus
     {
         [XmlElement("entry")]
-        public List<Child> Entries;
+        public List<Child> Entries { get; set; }
     }
 }

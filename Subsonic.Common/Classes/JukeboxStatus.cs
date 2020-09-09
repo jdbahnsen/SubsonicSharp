@@ -5,17 +5,17 @@ namespace Subsonic.Common.Classes
     [XmlInclude(typeof(JukeboxPlaylist))]
     public class JukeboxStatus
     {
-        [XmlAttribute("currentIndex")]
-        public int CurrentIndex;
-
-        [XmlAttribute("gain")]
-        public float Gain;
-
-        [XmlAttribute("playing")]
-        public bool Playing;
-
         [XmlIgnore]
         private int? _position;
+
+        [XmlAttribute("currentIndex")]
+        public int CurrentIndex { get; set; }
+
+        [XmlAttribute("gain")]
+        public float Gain { get; set; }
+
+        [XmlAttribute("playing")]
+        public bool Playing { get; set; }
 
         [XmlAttribute("position")]
         public int Position

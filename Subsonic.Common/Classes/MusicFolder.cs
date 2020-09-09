@@ -5,9 +5,9 @@ namespace Subsonic.Common.Classes
     public class MusicFolder
     {
         [XmlAttribute("id")]
-        public string Id;
+        public string Id { get; set; }
 
         [XmlAttribute("name")]
-        public string Name;
+        public string Name { get; set; }
     }
 }

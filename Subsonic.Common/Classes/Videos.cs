@@ -6,6 +6,6 @@ namespace Subsonic.Common.Classes
     public class Videos
     {
         [XmlElement("video")]
-        public List<Child> Items;
+        public List<Child> Items { get; set; }
     }
 }

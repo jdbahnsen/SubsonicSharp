@@ -6,33 +6,6 @@ namespace Subsonic.Common.Classes
     [XmlInclude(typeof(AlbumWithSongsID3))]
     public class AlbumID3
     {
-        [XmlAttribute("artist")]
-        public string Artist;
-
-        [XmlAttribute("artistId")]
-        public string ArtistId;
-
-        [XmlAttribute("coverArt")]
-        public string CoverArt;
-
-        [XmlAttribute("created")]
-        public DateTime Created;
-
-        [XmlAttribute("duration")]
-        public int Duration;
-
-        [XmlAttribute("genre")]
-        public string Genre;
-
-        [XmlAttribute("id")]
-        public string Id;
-
-        [XmlAttribute("name")]
-        public string Name;
-
-        [XmlAttribute("songCount")]
-        public int SongCount;
-
         [XmlIgnore]
         private long? _playCount;
 
@@ -42,12 +15,39 @@ namespace Subsonic.Common.Classes
         [XmlIgnore]
         private int? _year;
 
+        [XmlAttribute("artist")]
+        public string Artist { get; set; }
+
+        [XmlAttribute("artistId")]
+        public string ArtistId { get; set; }
+
+        [XmlAttribute("coverArt")]
+        public string CoverArt { get; set; }
+
+        [XmlAttribute("created")]
+        public DateTime Created { get; set; }
+
+        [XmlAttribute("duration")]
+        public int Duration { get; set; }
+
+        [XmlAttribute("genre")]
+        public string Genre { get; set; }
+
+        [XmlAttribute("id")]
+        public string Id { get; set; }
+
+        [XmlAttribute("name")]
+        public string Name { get; set; }
+
         [XmlAttribute("playCount")]
         public long PlayCount
         {
             get => _playCount.GetValueOrDefault();
             set => _playCount = value;
         }
+
+        [XmlAttribute("songCount")]
+        public int SongCount { get; set; }
 
         [XmlAttribute("starred")]
         public DateTime Starred

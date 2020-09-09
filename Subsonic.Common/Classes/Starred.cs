@@ -6,12 +6,12 @@ namespace Subsonic.Common.Classes
     public class Starred
     {
         [XmlElement("album")]
-        public List<Child> Albums;
+        public List<Child> Albums { get; set; }
 
         [XmlElement("artist")]
-        public List<Artist> Artists;
+        public List<Artist> Artists { get; set; }
 
         [XmlElement("song")]
-        public List<Child> Songs;
+        public List<Child> Songs { get; set; }
     }
 }

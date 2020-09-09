@@ -5,12 +5,12 @@ namespace Subsonic.Common.Classes
     public class AudioTrack
     {
         [XmlAttribute("id")]
-        public string Id;
-
-        [XmlAttribute("name")]
-        public string Name;
+        public string Id { get; set; }
 
         [XmlAttribute("languageCode")]
-        public string LanguageCode;
+        public string LanguageCode { get; set; }
+
+        [XmlAttribute("name")]
+        public string Name { get; set; }
     }
 }

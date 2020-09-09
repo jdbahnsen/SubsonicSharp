@@ -4,9 +4,6 @@ namespace Subsonic.Common.Classes
 {
     public class VideoConversion
     {
-        [XmlAttribute("id")]
-        public string Id;
-
         [XmlIgnore]
         private int? _audioTrackId;
 
@@ -26,6 +23,9 @@ namespace Subsonic.Common.Classes
             get => _bitRate.GetValueOrDefault();
             set => _bitRate = value;
         }
+
+        [XmlAttribute("id")]
+        public string Id { get; set; }
 
         public bool ShouldSerializeAudioTrackId()
         {

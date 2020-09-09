@@ -6,18 +6,6 @@ namespace Subsonic.Common.Classes
 {
     public class Directory
     {
-        [XmlElement("child")]
-        public List<Child> Children;
-
-        [XmlAttribute("id")]
-        public string Id;
-
-        [XmlAttribute("name")]
-        public string Name;
-
-        [XmlAttribute("parent")]
-        public string Parent;
-
         [XmlIgnore]
         private double? _averageRating;
 
@@ -36,6 +24,18 @@ namespace Subsonic.Common.Classes
             get => _averageRating.GetValueOrDefault();
             set => _averageRating = value;
         }
+
+        [XmlElement("child")]
+        public List<Child> Children { get; set; }
+
+        [XmlAttribute("id")]
+        public string Id { get; set; }
+
+        [XmlAttribute("name")]
+        public string Name { get; set; }
+
+        [XmlAttribute("parent")]
+        public string Parent { get; set; }
 
         [XmlAttribute("playCount")]
         public long PlayCount

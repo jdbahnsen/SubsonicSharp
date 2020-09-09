@@ -7,21 +7,21 @@ namespace Subsonic.Common.Classes
     public class Bookmark
     {
         [XmlAttribute("changed")]
-        public DateTime Changed;
+        public DateTime Changed { get; set; }
 
         [XmlElement("entry")]
-        public List<Child> Children;
+        public List<Child> Children { get; set; }
 
         [XmlAttribute("comment")]
-        public string Comment;
+        public string Comment { get; set; }
 
         [XmlAttribute("created")]
-        public DateTime Created;
+        public DateTime Created { get; set; }
 
         [XmlAttribute("position")]
-        public long Position;
+        public long Position { get; set; }
 
         [XmlAttribute("username")]
-        public string Username;
+        public string Username { get; set; }
     }
 }

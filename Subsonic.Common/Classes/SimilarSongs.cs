@@ -6,6 +6,6 @@ namespace Subsonic.Common.Classes
     public class SimilarSongs
     {
         [XmlElement("song")]
-        public List<Child> Songs;
+        public List<Child> Songs { get; set; }
     }
 }

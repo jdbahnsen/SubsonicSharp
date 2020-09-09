@@ -6,6 +6,6 @@ namespace Subsonic.Common.Classes
     public class NewestPodcasts
     {
         [XmlElement("episode")]
-        public List<PodcastEpisode> Episodes;
+        public List<PodcastEpisode> Episodes { get; set; }
     }
 }

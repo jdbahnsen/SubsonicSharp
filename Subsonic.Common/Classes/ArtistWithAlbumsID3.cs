@@ -6,6 +6,6 @@ namespace Subsonic.Common.Classes
     public class ArtistWithAlbumsID3 : ArtistID3
     {
         [XmlElement("album")]
-        public List<AlbumID3> Albums;
+        public List<AlbumID3> Albums { get; set; }
     }
 }

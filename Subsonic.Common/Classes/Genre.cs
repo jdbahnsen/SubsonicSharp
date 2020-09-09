@@ -5,12 +5,12 @@ namespace Subsonic.Common.Classes
     public class Genre
     {
         [XmlAttribute("albumCount")]
-        public int AlbumCount;
-
-        [XmlAttribute("songCount")]
-        public int SongCount;
+        public int AlbumCount { get; set; }
 
         [XmlText]
-        public string Name;
+        public string Name { get; set; }
+
+        [XmlAttribute("songCount")]
+        public int SongCount { get; set; }
     }
 }

@@ -5,15 +5,15 @@ namespace Subsonic.Common.Classes
     public class NowPlayingEntry : Child
     {
         [XmlAttribute("minutesAgo")]
-        public int MinutesAgo;
+        public int MinutesAgo { get; set; }
 
         [XmlAttribute("playerId")]
-        public int PlayerId;
+        public int PlayerId { get; set; }
 
         [XmlAttribute("playerName")]
-        public string PlayerName;
+        public string PlayerName { get; set; }
 
         [XmlAttribute("username")]
-        public string Username;
+        public string Username { get; set; }
     }
 }
